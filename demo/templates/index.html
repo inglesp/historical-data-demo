@@ -1,0 +1,16 @@
+<h1>Practices</h1>
+
+<table>
+	<tr>
+		<th>Code</th>
+		<th>Name</th>
+		<th>Latest release</th>
+	</tr>
+	{% for p in practices %}
+	<tr>
+		<td><a href="{% url 'practice' p.code %}">{{ p.name }}</a></td>
+		<td>{{ p.code }}</td>
+		<td>{{ p.release_date }}</td>
+	</tr>
+	{% endfor %}
+</table>
